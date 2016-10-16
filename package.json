@@ -1,0 +1,30 @@
+{
+  "name": "ademilter-2017",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ademilter/ademilter-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ademilter/ademilter-blog/issues"
+  },
+  "homepage": "https://github.com/ademilter/ademilter-blog#readme",
+  "devDependencies": {
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-sass": "*",
+    "gulp-cssnano": "*",
+    "gulp-uglify": "*",
+    "gulp-concat": "*",
+    "gulp-sourcemaps": "*"
+  }
+}

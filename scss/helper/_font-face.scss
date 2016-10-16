@@ -1,0 +1,29 @@
+@font-face {
+  font-family: $font-sans-name;
+  src: url('#{$font-src}CircularStd-Book.eot');
+  src: url('#{$font-src}CircularStd-Book.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-src}CircularStd-Book.woff2') format('woff2'),
+  url('#{$font-src}CircularStd-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-sans-name;
+  src: url('#{$font-src}CircularStd-Bold.eot');
+  src: url('#{$font-src}CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-src}CircularStd-Bold.woff2') format('woff2'),
+  url('#{$font-src}CircularStd-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-serif-name;
+  src: url('#{$font-src}TiemposTextWeb-Regular.eot');
+  src: url('#{$font-src}TiemposTextWeb-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-src}TiemposTextWeb-Regular.woff2') format('woff2'),
+  url('#{$font-src}TiemposTextWeb-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

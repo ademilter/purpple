@@ -1,0 +1,24 @@
+/*!
+Theme Name: Purpple
+Author: Adem ilter
+Author URI: https://ademilter.com/
+Version: 1.0
+*/
+@import "option/variable";
+@import "option/function";
+@import "option/mixin";
+//
+@import "helper/normalize";
+@import "helper/formalize";
+@import "helper/grid";
+@import "helper/font-face";
+@import "helper/typography";
+@import "helper/public";
+//
+@import "global/header";
+@import "global/footer";
+//
+@import "sections/About";
+@import "sections/Cover";
+@import "sections/Highlight";
+@import "sections/Journal";
