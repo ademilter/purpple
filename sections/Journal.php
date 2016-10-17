@@ -21,7 +21,7 @@
           $img_name = get_post_meta(get_the_ID(), 'img_name', true);
           $focalpoint = get_post_meta(get_the_ID(), 'focalpoint', true);
           $prefix = "http://adem.imgix.net/";
-          $suffix = "?fit=crop&crop=focalpoint&q=60&";
+          $suffix = "?fit=crop&crop=focalpoint&auto=format&q=70&";
           $name = $prefix . $img_name . $suffix . $focalpoint;
           ?>
           <div class="col-xs-12 col-md-4">
