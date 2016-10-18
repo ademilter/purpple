@@ -1,28 +1,41 @@
 {
-  "name": "ademilter-2017",
+  "name": "Purpple",
   "version": "1.0.0",
-  "description": "",
+  "description": "Wordpress theme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "setup": "npm install",
+    "run": "gulp",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ademilter/ademilter-blog.git"
+    "url": "git+https://github.com/ademilter/purpple.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "wp",
+    "wordpress",
+    "theme"
+  ],
+  "author": {
+    "name": "Adem ilter",
+    "email": "ademilter@gmail.com",
+    "web": "http://ademilter.com/"
+  },
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ademilter/ademilter-blog/issues"
+    "url": "https://github.com/ademilter/purpple/issues"
   },
-  "homepage": "https://github.com/ademilter/ademilter-blog#readme",
+  "homepage": "https://github.com/ademilter/purpple#readme",
   "devDependencies": {
     "browser-sync": "*",
     "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-sass": "*",
     "gulp-cssnano": "*",
+    "gulp-header": "*",
+    "gulp-gzip": "*",
+    "gulp-size": "*",
     "gulp-uglify": "*",
     "gulp-concat": "*",
     "gulp-sourcemaps": "*"
