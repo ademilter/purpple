@@ -363,9 +363,3 @@ AddDefaultCharset utf-8
     ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
 
 </IfModule>
-
-
-# BEGIN REDIRECTS
-Redirect /twitter https://twitter.com/
-Redirect /mail mailto:ademilter@gmail.com
-# END REDIRECTS
