@@ -34,7 +34,6 @@
     "gulp-sass": "*",
     "gulp-cssnano": "*",
     "gulp-header": "*",
-    "gulp-gzip": "*",
     "gulp-size": "*",
     "gulp-uglify": "*",
     "gulp-concat": "*",

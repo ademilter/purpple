@@ -6,7 +6,6 @@ browserSync = require('browser-sync').create(),
   uglify = require('gulp-uglify'),
   size = require('gulp-size'),
   concat = require('gulp-concat'),
-  gzip = require('gulp-gzip'),
   header = require('gulp-header'),
   sourcemaps = require('gulp-sourcemaps'),
   pkg = require('./package.json');
@@ -38,7 +37,6 @@ gulp.task('css-min', ['css'], function () {
     .pipe(cssnano({ discardComments: { removeAll: true } }))
     .pipe(header(banner, { pkg: pkg }))
     .pipe(gulp.dest('./'))
-    .pipe(gzip())
     .pipe(size({ pretty: true, showFiles: true }))
     .pipe(gulp.dest('./'));
 });
@@ -67,7 +65,6 @@ gulp.task("js-min", ['js'], function () {
   return gulp.src('./script.js')
     .pipe(uglify())
     .pipe(gulp.dest("./"))
-    .pipe(gzip())
     .pipe(size({ pretty: true, showFiles: true }))
     .pipe(gulp.dest("./"))
 });
