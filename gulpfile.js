@@ -7,6 +7,7 @@ browserSync = require('browser-sync').create(),
   size = require('gulp-size'),
   concat = require('gulp-concat'),
   header = require('gulp-header'),
+  svgmin = require('gulp-svgmin'),
   sourcemaps = require('gulp-sourcemaps'),
   pkg = require('./package.json');
 
@@ -26,7 +27,7 @@ gulp.task('css', function () {
   return gulp.src('./scss/style.scss')
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(prefix({ browsers: ['last 1 versions'] }))
+    .pipe(prefix({browsers: ['last 1 versions']}))
     .pipe(sourcemaps.write('./maps/'))
     .pipe(gulp.dest('./'))
     .pipe(browserSync.stream());
@@ -34,10 +35,10 @@ gulp.task('css', function () {
 
 gulp.task('css-min', ['css'], function () {
   return gulp.src('./style.css')
-    .pipe(cssnano({ discardComments: { removeAll: true } }))
-    .pipe(header(banner, { pkg: pkg }))
+    .pipe(cssnano({discardComments: {removeAll: true}}))
+    .pipe(header(banner, {pkg: pkg}))
     .pipe(gulp.dest('./'))
-    .pipe(size({ pretty: true, showFiles: true }))
+    .pipe(size({pretty: true, showFiles: true}))
     .pipe(gulp.dest('./'));
 });
 
@@ -47,10 +48,7 @@ gulp.task('css-min', ['css'], function () {
 var jsfiles = [
   './js/lib/jquery.min.js',
   './js/lib/picturefill.js',
-  // './js/loadCSS/loadCSS.js',
-  // './js/loadCSS/cssrelpreload.js',
-  // './js/loadCSS/onloadCSS.js',
-  // './js/logo-animation.js'
+  //'./js/lib/wp-emoji-release.min.js'
 ];
 
 gulp.task("js", function () {
@@ -65,12 +63,19 @@ gulp.task("js-min", ['js'], function () {
   return gulp.src('./script.js')
     .pipe(uglify())
     .pipe(gulp.dest("./"))
-    .pipe(size({ pretty: true, showFiles: true }))
+    .pipe(size({pretty: true, showFiles: true}))
     .pipe(gulp.dest("./"))
 });
 
+// SVG MIN //////////////////
 
-// BROWSERSYNC  //////////////////
+gulp.task('svg-min', function () {
+  return gulp.src('./img/emoji/svg/**/*.svg')
+    .pipe(svgmin())
+    .pipe(gulp.dest('./img/emoji/svg-min/'));
+});
+
+// BROWSERSYNC //////////////////
 
 gulp.task('serve', ['css', 'js'], function () {
   browserSync.init({
@@ -89,3 +94,4 @@ gulp.task('serve', ['css', 'js'], function () {
 
 gulp.task('default', ['serve']);
 gulp.task('build', ['css-min', 'js-min']);
+gulp.task('svg', ['svg-min']);
