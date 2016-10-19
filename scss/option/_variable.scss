@@ -16,11 +16,13 @@ $font-text-size: 20px;
 $font-text-size-desktop: 22px;
 $font-text-size-small: .86em;
 $font-line-height: 1.5;
-$font-src: "fonts/";
+
+// FONT
 $font-sans-name: "Circular";
-$font-serif-name: "Tiempos Text";
-$font-family-sans: $font-sans-name, Helvetica, sans-serif;
+$font-serif-name: "TiemposText";
+$font-family-sans: $font-sans-name, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 $font-family-serif: $font-serif-name, Georgia, Serif;
+$font-src: "fonts/";
 
 // BREAKPOINTS
 $breakpoints: (

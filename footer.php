@@ -19,7 +19,6 @@
 
 
 <?php wp_footer(); ?>
-
 <script>
   (function (m, e, r, h, a, b, aa) {
     m['GoogleAnalyticsObject'] = a;
@@ -36,21 +35,5 @@
   ga('create', 'UA-17768654-1', 'auto');
   ga('send', 'pageview');
 </script>
-
-<script>
-  /*$(function () {
-   getSongs();
-   });
-   function getSongs() {
-   var feed = 'http://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=ademilter&api_key=ffbd080e43defa8360862e7a937912bd&limit=2&format=json&callback=?';
-   $.getJSON(feed, function (data) {
-   var track = data.recenttracks.track[0];
-   $('.Scrobbler-title a').attr("href", track.url).text(track.name + " - " + track.artist['#text']);
-   });
-   setTimeout(getSongs, 60000);
-   }*/
-</script>
-
-
 </body>
 </html>

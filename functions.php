@@ -32,6 +32,7 @@ add_action('after_setup_theme', 'purpple_setup');
 
 function javascript_detection()
 {
+  echo '<script>siteUrl="' . get_template_directory_uri() . '";</script>';
   echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
 

@@ -27,7 +27,7 @@ gulp.task('css', function () {
   return gulp.src('./scss/style.scss')
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(prefix({browsers: ['last 1 versions']}))
+    .pipe(prefix({ browsers: ['last 1 versions'] }))
     .pipe(sourcemaps.write('./maps/'))
     .pipe(gulp.dest('./'))
     .pipe(browserSync.stream());
@@ -35,20 +35,25 @@ gulp.task('css', function () {
 
 gulp.task('css-min', ['css'], function () {
   return gulp.src('./style.css')
-    .pipe(cssnano({discardComments: {removeAll: true}}))
-    .pipe(header(banner, {pkg: pkg}))
-    .pipe(gulp.dest('./'))
-    .pipe(size({pretty: true, showFiles: true}))
+    .pipe(cssnano({ discardComments: { removeAll: true } }))
+    .pipe(header(banner, { pkg: pkg }))
+    .pipe(size({ pretty: true, showFiles: true }))
     .pipe(gulp.dest('./'));
 });
 
+gulp.task('css-font', function () {
+  return gulp.src('./scss/fonts.scss')
+    .pipe(sass())
+    .pipe(size({ pretty: true, showFiles: true }))
+    .pipe(gulp.dest('./'))
+});
 
 // SCRIPT //////////////////
 
 var jsfiles = [
   './js/lib/jquery.min.js',
   './js/lib/picturefill.js',
-  //'./js/lib/wp-emoji-release.min.js'
+  './js/main.js'
 ];
 
 gulp.task("js", function () {
@@ -62,10 +67,10 @@ gulp.task("js", function () {
 gulp.task("js-min", ['js'], function () {
   return gulp.src('./script.js')
     .pipe(uglify())
-    .pipe(gulp.dest("./"))
-    .pipe(size({pretty: true, showFiles: true}))
+    .pipe(size({ pretty: true, showFiles: true }))
     .pipe(gulp.dest("./"))
 });
+
 
 // SVG MIN //////////////////
 
@@ -75,17 +80,18 @@ gulp.task('svg-min', function () {
     .pipe(gulp.dest('./img/emoji/svg-min/'));
 });
 
+
 // BROWSERSYNC //////////////////
 
-gulp.task('serve', ['css', 'js'], function () {
+gulp.task('serve', ['css', 'css-font', 'js'], function () {
   browserSync.init({
     notify: false,
     proxy: {
       target: "ai/"
     }
   });
-  gulp.watch('./scss/**/*.*', ['css']);
-  gulp.watch('./js/**/*.*').on('change', browserSync.reload);
+  gulp.watch('./scss/**/*.*', ['css', 'css-font']);
+  gulp.watch('./js/**/*.*', ['js']).on('change', browserSync.reload);
   gulp.watch('./**/*.php').on('change', browserSync.reload);
 });
 
@@ -93,5 +99,5 @@ gulp.task('serve', ['css', 'js'], function () {
 // DO IT  //////////////////
 
 gulp.task('default', ['serve']);
-gulp.task('build', ['css-min', 'js-min']);
+gulp.task('build', ['css-min', 'css-font', 'js-min']);
 gulp.task('svg', ['svg-min']);
