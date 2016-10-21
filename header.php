@@ -28,11 +28,11 @@
     }
     if (!window.HTMLPictureElement || !('sizes' in document.createElement('img'))) {
       document.createElement('picture');
-      loadJS("<?php echo get_template_directory_uri(); ?>/js/lib/respimage.js");
+      loadJS("<?php echo get_template_directory_uri(); ?>/js/lib/respimage.min.js");
     }
   </script>
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css"/>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/lib/lazysizes.js" async></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/lib/lazysizes.min.js" async></script>
 
 
   <meta property="og:type" content="website">
