@@ -26,9 +26,10 @@ var banner = ['/*',
 
 gulp.task('css-inline', function () {
   return gulp.src('./scss/inline.scss')
-    // .pipe(sourcemaps.init())
+  // .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(prefix({ browsers: ['last 1 versions'] }))
+    .pipe(cssnano())
     // .pipe(sourcemaps.write('./maps/'))
     .pipe(gulp.dest('./'))
     .pipe(browserSync.stream());
@@ -69,7 +70,7 @@ var jsfiles = [
 
 gulp.task("js", function () {
   return gulp.src(jsfiles)
-    // .pipe(sourcemaps.init())
+  // .pipe(sourcemaps.init())
     .pipe(concat('script.js'))
     // .pipe(sourcemaps.write('./maps/'))
     .pipe(gulp.dest("./"))
