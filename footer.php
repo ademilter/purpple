@@ -19,6 +19,7 @@
 
 
 <?php wp_footer(); ?>
+
 <script>
   (function (m, e, r, h, a, b, aa) {
     m['GoogleAnalyticsObject'] = a;
@@ -35,5 +36,6 @@
   ga('create', 'UA-17768654-1', 'auto');
   ga('send', 'pageview');
 </script>
+
 </body>
 </html>

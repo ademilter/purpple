@@ -15,7 +15,7 @@
         <div class="About-row-info row top-md">
           <div class="About-detail col-xs-12 col-md-8">
             <p>
-              Building simple and elegant foundations for complex interfaces is what I enjoy most about my work.
+              Building simple and elegant structures for complex interfaces is what I enjoy most about my work.
               I am also interested in designing beautiful minimal products and exploring typefaces.
             </p>
             <br>

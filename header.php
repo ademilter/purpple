@@ -12,6 +12,7 @@
   <?php if (is_singular() && pings_open(get_queried_object())) : ?>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
   <?php endif; ?>
+
   <?php wp_head(); ?>
 
   <meta http-equiv="cleartype" content="on">
@@ -19,21 +20,6 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="theme-color" content="#2D184B">
   <meta name="msapplication-navbutton-color" content="#2D184B">
-
-  <script>
-    function loadJS(u) {
-      var r = document.getElementsByTagName("script")[0], s = document.createElement("script");
-      s.src = u;
-      r.parentNode.insertBefore(s, r);
-    }
-    if (!window.HTMLPictureElement || !('sizes' in document.createElement('img'))) {
-      document.createElement('picture');
-      loadJS("<?php echo get_template_directory_uri(); ?>/js/lib/respimage.min.js");
-    }
-  </script>
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css"/>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/lib/lazysizes.min.js" async></script>
-
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://ademilter.com/">
