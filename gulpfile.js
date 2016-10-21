@@ -52,7 +52,6 @@ gulp.task('css-font', function () {
 
 var jsfiles = [
   './js/lib/jquery.min.js',
-  './js/lib/picturefill.js',
   './js/main.js'
 ];
 

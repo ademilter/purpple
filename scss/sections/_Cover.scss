@@ -1,11 +1,11 @@
 .Cover {
   position: relative;
-  //margin-top: 150px;
 
   @include breakpoints("sm") {
     &:before,
     &:after {
       content: "";
+      z-index: 2;
       position: absolute;
       left: 0;
       width: 100%;

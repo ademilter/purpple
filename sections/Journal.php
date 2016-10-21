@@ -27,9 +27,12 @@
           <div class="col-xs-12 col-md-4">
             <article class="Bucket">
               <picture class="Bucket-cover">
-                <source media="(min-width: 992px)" srcset="<?php echo $name; ?>&w=500&h=400">
-                <source media="(min-width: 768px)" srcset="<?php echo $name; ?>&w=600&h=200">
-                <img srcset="<?php echo $name; ?>&w=400&h=200" alt="<?php the_title() ?>">
+                <source media="(min-width: 992px)" data-srcset="<?php echo $name; ?>&w=500&h=400">
+                <source media="(min-width: 768px)" data-srcset="<?php echo $name; ?>&w=600&h=200">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-src="<?php echo $name; ?>&w=400&h=200"
+                     class="img-fadein lazyload"
+                     alt="<?php the_title() ?>">
               </picture>
               <div class="Bucket-info">
                 <h3 class="Bucket-info-title"><?php the_title() ?></h3>

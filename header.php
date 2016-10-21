@@ -18,13 +18,29 @@
   <meta name="google" value="notranslate">
   <meta name="format-detection" content="telephone=no">
   <meta name="theme-color" content="#2D184B">
+  <meta name="msapplication-navbutton-color" content="#2D184B">
+
+  <script>
+    function loadJS(u) {
+      var r = document.getElementsByTagName("script")[0], s = document.createElement("script");
+      s.src = u;
+      r.parentNode.insertBefore(s, r);
+    }
+    if (!window.HTMLPictureElement || !('sizes' in document.createElement('img'))) {
+      document.createElement('picture');
+      loadJS("<?php echo get_template_directory_uri(); ?>/js/lib/respimage.js");
+    }
+  </script>
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css"/>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/lib/lazysizes.js" async></script>
+
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://ademilter.com/">
   <meta property="og:title" content="Adem ilter">
   <meta property="og:description" content="Hi. I’m ADEM, Frontend Developer who lives in Istanbul.">
   <meta property="og:image"
-        content="http://adem.imgix.net/site-cover-photo.jpg?w=1200&h=635&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.3&q=60">
+        content="http://adem.imgix.net/site-cover-photo.jpg?w=1200&h=630&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.3&auto=format&q=60">
   <meta name="twitter:site" content="@ademilter">
   <meta name="twitter:creator" content="@ademilter">
   <meta name="twitter:domain" content="http://ademilter.com/">
@@ -34,7 +50,6 @@
         content="http://adem.imgix.net/site-cover-photo.jpg?w=1000&h=700&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.3&q=60">
   <link href="https://plus.google.com/+AdemIlter" rel="publisher">
 
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css"/>
 </head>
 
 <body <?php body_class(); ?>>
