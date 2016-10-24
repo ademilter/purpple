@@ -29,9 +29,15 @@
       loadJS("<?php echo get_template_directory_uri() ?>/js/lib/respimage.min.js");
     }
   </script>
-  <style type="text/css">
-    <?php echo file_get_contents(get_template_directory_uri(). "/inline.css") ?>
-  </style>
+
+  <?php if ($_SERVER['SERVER_NAME'] == "ademilter.com") { ?>
+    <style type="text/css">
+      <?php echo file_get_contents(get_template_directory_uri(). "/inline.css");?>
+    </style>
+  <?php } else { ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/inline.css">
+  <?php } ?>
+
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/fonts.css" media="none"
         onload="if(media!='all')media='all'">
   <noscript>
