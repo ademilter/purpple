@@ -2,6 +2,7 @@
 <html <?php language_attributes(); ?> class="no-js">
 <head>
   <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//adem.dropmark.com">
   <link rel="dns-prefetch" href="//adem.imgix.net">
 
   <meta charset="<?php bloginfo('charset'); ?>">

@@ -19,7 +19,7 @@ function starter_scripts()
   wp_enqueue_script('main', get_template_directory_uri() . '/script.js', false, false, true);
 }
 
-//add_action('wp_enqueue_scripts', 'starter_scripts');
+add_action('wp_enqueue_scripts', 'starter_scripts');
 
 
 // PURPPLE_SETUP ////////////////////////////

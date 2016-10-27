@@ -65,6 +65,7 @@ gulp.task('css-min', ['css-inline', 'css-style', 'css-font'], function () {
 
 var jsfiles = [
   './js/lib/jquery.min.js',
+  './js/lib/handlebars.min.js',
   './js/main.js'
 ];
 
