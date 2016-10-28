@@ -36,7 +36,6 @@
     "gulp-header": "*",
     "gulp-size": "*",
     "gulp-uglify": "*",
-    "gulp-imagemin": "*",
     "gulp-svgmin": "*",
     "gulp-concat": "*",
     "gulp-sourcemaps": "*"

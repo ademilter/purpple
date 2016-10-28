@@ -9,7 +9,6 @@ browserSync = require('browser-sync').create(),
   header = require('gulp-header'),
   svgmin = require('gulp-svgmin'),
   sourcemaps = require('gulp-sourcemaps'),
-  imagemin = require('gulp-imagemin'),
   pkg = require('./package.json'),
   fs = require('fs');
 
@@ -94,14 +93,6 @@ gulp.task('svg-min', function () {
     .pipe(gulp.dest('./img/emoji/svg-min/'));
 });
 
-// PNG MIN //////////////////
-
-gulp.task('png-min', function () {
-  gulp.src('./img/emoji/png/**/*.png')
-    .pipe(imagemin())
-    .pipe(gulp.dest('./img/emoji/png-min/'));
-});
-
 
 // BROWSERSYNC //////////////////
 
@@ -124,5 +115,3 @@ gulp.task('serve', ['css-inline', 'css-style', 'css-font', 'js'], function () {
 gulp.task('default', ['serve']);
 gulp.task('build', ['css-min', 'js-min']);
 gulp.task('svg', ['svg-min']);
-gulp.task('png', ['png-min']);
-gulp.task('media', ['svg-min', 'png-min']);
