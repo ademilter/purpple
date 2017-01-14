@@ -2,11 +2,10 @@
 <html <?php language_attributes(); ?> class="no-js">
 <head>
   <link rel="dns-prefetch" href="//www.google-analytics.com">
-  <link rel="dns-prefetch" href="//adem.dropmark.com">
   <link rel="dns-prefetch" href="//adem.imgix.net">
 
   <meta charset="<?php bloginfo('charset'); ?>">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, shrink-to-fit=no">
 
   <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -45,6 +44,12 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/fonts.css">
   </noscript>
   <script src="<?php echo get_template_directory_uri() ?>/js/lib/lazysizes.min.js" async></script>
+
+  <link rel="icon" href="<?php echo get_template_directory_uri() ?>/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="<?php echo get_template_directory_uri() ?>/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="<?php echo get_template_directory_uri() ?>/img/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="<?php echo get_template_directory_uri() ?>/img/favicon-62.png" sizes="62x62" type="image/png">
+  <link rel="icon" href="<?php echo get_template_directory_uri() ?>/img/favicon-192.png" sizes="192x192" type="image/png">
 
   <meta name="google" value="notranslate">
   <meta name="theme-color" content="#2D184B">
