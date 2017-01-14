@@ -32,7 +32,6 @@
     b.src = h;
     aa.parentNode.insertBefore(b, aa)
   })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
   ga('create', 'UA-17768654-1', 'auto');
   ga('send', 'pageview');
 </script>

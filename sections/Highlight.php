@@ -29,7 +29,7 @@
               <div class="row">
                 <div class="Event-meta col-xs-12 col-md-3">
                   <h5 class="Event-meta-category"><?php echo $tag ?></h5>
-                  <time class="Event-meta-date"><?php the_time('F j, Y'); ?> </time>
+                  <time class="Event-meta-date"><?php the_time('F j, Y'); ?></time>
                 </div>
                 <div class="Event-content col-xs-12 first-xs last-md col-md-offset-1 col-md-8">
                   <h3 class="Event-content-title">

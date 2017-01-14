@@ -6,7 +6,6 @@
     <?php include_once "sections/Cover.php" ?>
     <?php include_once "sections/Highlight.php" ?>
     <?php include_once "sections/Journal.php" ?>
-    <?php include_once "sections/Suggestion.php" ?>
 
   </main>
   <!-- /.Main -->
